@@ -54,16 +54,6 @@ body {
   transition: filter 0.3s ease;
 }
 
-.navbar-toggler:focus .navbar-toggler-icon,
-.navbar-toggler:hover .navbar-toggler-icon {
-  filter: brightness(0) invert(0.7);
-  outline-offset: 2px;
-  outline-color: #ff69b4;
-  outline-style: solid;
-  outline-width: 2px;
-}
-
-/* Optional: subtle shadow to navbar */
 .navbar {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   backdrop-filter: saturate(180%) blur(20px);
@@ -201,7 +191,7 @@ body {
 
 .about-text {
   color: #555;
-  font-size:2rem;
+  font-size: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
   transition: color 0.3s ease;
@@ -213,7 +203,7 @@ body {
 }
 
 .about-img {
-  height:30rem;
+  height: 30rem;
   max-width: 100%;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
@@ -228,8 +218,6 @@ body {
   outline: none;
   cursor: pointer;
 }
-
-
 
 /* ===== Resources Section ===== */
 #resources ul.list-group {
@@ -453,7 +441,7 @@ body.dark-mode #contactForm {
 
 body.dark-mode #contactForm .form-control::placeholder {
   color: #ffccd9;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 body.dark-mode #contactForm .form-label {
