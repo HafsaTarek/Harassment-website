@@ -1,0 +1,497 @@
+/* General body styles */
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar brand style */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.9rem; /* slightly bigger for emphasis */
+  letter-spacing: 1.4px;
+  color: #ff69b4 !important; /* use hotpink for better contrast */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-brand:hover {
+  color: #e055a1 !important;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #ddd !important;
+  transition: color 0.2s ease, text-decoration 0.2s ease,
+    background-color 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  outline-offset: 2px;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff69b4 !important;
+  text-decoration: underline;
+  outline-color: #ff69b4;
+  outline-style: solid;
+  outline-width: 2px;
+  background-color: rgba(255, 105, 180, 0.15);
+}
+
+/* Navbar toggler (hamburger) color */
+.navbar-dark .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.navbar-toggler:focus .navbar-toggler-icon,
+.navbar-toggler:hover .navbar-toggler-icon {
+  filter: brightness(0) invert(0.7);
+  outline-offset: 2px;
+  outline-color: #ff69b4;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/* Optional: subtle shadow to navbar */
+.navbar {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Adjust navbar container padding */
+.navbar .container {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Hero section styling */
+.hero {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1200px;
+  text-align: center;
+  transition: background 0.4s ease;
+}
+
+/* Headline */
+.hero h1 {
+  font-weight: 800;
+  font-size: 3.2rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtext */
+.hero p.lead {
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.hero .btn {
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  background-color: white;
+  color: #ff1493;
+  border: 2px solid white;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
+  transition: all 0.35s ease;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.hero .btn:hover,
+.hero .btn:focus {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.7);
+  outline-offset: 3px;
+  outline-color: white;
+  outline-style: solid;
+  outline-width: 2px;
+  cursor: pointer;
+}
+
+/* Image container */
+.hero img {
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(255, 20, 147, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  user-select: none;
+  cursor: default;
+}
+
+.hero img:hover,
+.hero img:focus {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 18px 45px rgba(255, 20, 147, 0.75);
+  outline-offset: 4px;
+  outline-color: #ff1493;
+  outline-style: solid;
+  outline-width: 3px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero p.lead {
+    font-size: 1.15rem;
+  }
+  .hero img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p.lead {
+    font-size: 1rem;
+  }
+  .hero img {
+    max-width: 220px;
+  }
+}
+
+/* About section styles */
+.section-title {
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: #ff1493; /* strong pink */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(255, 20, 147, 0.4);
+}
+
+.about-text {
+  color: #555;
+  font-size:2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.about-text:hover {
+  color: #ff1493;
+  cursor: default;
+}
+
+.about-img {
+  height:30rem;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  user-select: none;
+}
+
+.about-img:hover,
+.about-img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 18px 45px rgba(255, 20, 147, 0.6);
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+/* ===== Resources Section ===== */
+#resources ul.list-group {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+#resources .list-group-item {
+  font-size: 1.1rem;
+  background-color: #fff0f6; /* soft pink background */
+  border: 1px solid #ff69b4;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#resources .list-group-item:hover,
+#resources .list-group-item:focus-within {
+  background-color: #ffb6c1;
+  color: #4a0026;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+  outline: none;
+}
+
+#resources .list-group-item a {
+  color: #c71585; /* medium violet red */
+  text-decoration: none;
+  font-weight: 600;
+  user-select: text;
+}
+
+#resources .list-group-item a:hover,
+#resources .list-group-item a:focus {
+  color: #ff1493; /* deeper pink */
+  text-decoration: underline;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ===== FAQ Accordion ===== */
+#faq h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ff1493;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: #ff69b4;
+  background-color: #fff0f6;
+  border: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background: #ff1493;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.5);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 20, 147, 0.5);
+  outline: none;
+}
+
+.accordion-body {
+  font-size: 1.05rem;
+  color: #444;
+  background-color: #fff0f6;
+  border-top: 1px solid #ff69b4;
+  border-radius: 0 0 8px 8px;
+  padding: 1rem 1.5rem;
+}
+
+/* ===== Contact Form ===== */
+#contact h2 {
+  text-align: center;
+  color: #ff1493;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff0f6;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.25);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm .form-label {
+  font-weight: 600;
+  color: #c71585;
+}
+
+#contactForm .form-control {
+  border: 1.5px solid #ff69b4;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactForm .form-control:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.6);
+  color: #333;
+}
+
+#contactForm .form-control.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.7);
+}
+
+#contactForm .btn {
+  background-color: #ff1493;
+  border: none;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.5);
+  transition: background-color 0.3s ease;
+  color: white;
+  display: block;
+  margin: 1.5rem auto 0;
+  width: 100%;
+  max-width: 250px;
+  user-select: none;
+}
+
+#contactForm .btn:hover,
+#contactForm .btn:focus {
+  background-color: #ff69b4;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.75);
+  outline-offset: 3px;
+  outline-color: #ff1493;
+  outline-style: solid;
+  outline-width: 2px;
+  cursor: pointer;
+}
+
+#formFeedback {
+  max-width: 600px;
+  margin: 1rem auto 0;
+  font-weight: 600;
+  text-align: center;
+  min-height: 1.2em; /* Reserve space to avoid layout shifts */
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #ff1493;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  user-select: none;
+  box-shadow: 0 -2px 10px rgba(255, 20, 147, 0.7);
+  padding: 1rem 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* ===== Dark Mode Enhancements for New Sections ===== */
+body.dark-mode {
+  background-color: #1a001f;
+  color: #ffcce7;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode #resources .list-group-item {
+  background-color: #330026;
+  border-color: #ff69b4;
+  color: #ffcce7;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+}
+
+body.dark-mode #resources .list-group-item a {
+  color: #ffb6c1;
+}
+
+body.dark-mode #resources .list-group-item a:hover {
+  color: #ff1493;
+}
+
+body.dark-mode #faq h2 {
+  color: #ffb6c1;
+}
+
+body.dark-mode .accordion-button {
+  background-color: #330026;
+  color: #ffb6c1;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #ff1493;
+  color: #fff;
+}
+
+body.dark-mode .accordion-body {
+  background-color: #330026;
+  color: #ffd1e8;
+  border-top-color: #ff69b4;
+}
+
+body.dark-mode #contact h2 {
+  color: #ffb6c1 !;
+}
+
+body.dark-mode #contactForm {
+  background-color: #330026;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.75);
+}
+
+body.dark-mode #contactForm .form-control::placeholder {
+  color: #ffccd9;
+  opacity: 0.8; 
+}
+
+body.dark-mode #contactForm .form-label {
+  color: #ffb6c1;
+}
+
+body.dark-mode #contactForm .form-control {
+  background-color: #440033;
+  border-color: #ff69b4;
+  color: #ffcce7;
+}
+
+body.dark-mode #contactForm .form-control:focus {
+  background-color: #550044;
+  border-color: #ff1493;
+  color: #fff;
+  box-shadow: 0 0 8px #ff69b4;
+}
+
+body.dark-mode #contactForm .form-control.is-invalid {
+  border-color: #ff6b81;
+  box-shadow: 0 0 8px #ff6b81;
+}
+
+body.dark-mode #contactForm .btn {
+  background-color: #ff1493;
+  color: white;
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.6);
+}
+
+body.dark-mode #contactForm .btn:hover,
+body.dark-mode #contactForm .btn:focus {
+  background-color: #ff69b4;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.9);
+}
+
+body.dark-mode footer {
+  background-color: #1e001f;
+  color: #ff69b4;
+  box-shadow: 0 -2px 10px rgba(255, 20, 147, 0.9);
+}
